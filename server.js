@@ -1,9 +1,9 @@
 const fs = require('fs');
 const express = require('express');
-const app = express();
 const path = require('path');
 const uuid = require('uuid');
 var PORT = process.env.PORT || 3001;
+const app = express();
 
 // middleware
 app.use(express.urlencoded({ extended: true }));
@@ -29,14 +29,14 @@ app.post("/api/notes", (req, res) => {
 // html
 // for landing page
 app.get('/', function (req, res) {
-    res.sendFile(path.join(__dirname, "/public/index.html"));
+    res.sendFile(path.join(__dirname, "./public/index.html"));
 });
 // for notes page
 app.get('/notes', function (req, res) {
-    res.sendFile(path.join(__dirname, "/public/notes.html"));
+    res.sendFile(path.join(__dirname, "./public/notes.html"));
 });
 
 // listen
-app.listen(PORT, function() {
-    console.log('App listening on PORT: ' + PORT);
+app.listen(PORT, () => {
+    console.log(`API server now on port ${PORT}!`);
 })
