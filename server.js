@@ -8,12 +8,12 @@ const app = express();
 // middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static('public'));
+app.use(express.static('./public'));
 
 // routes
 // Get note and send to db.json
 app.get("/api/notes", (req, res) => {
-    res.sendFile(path.join(__dirname, '/db/db.json'))
+    res.sendFile(path.join(__dirname, './db/db.json'))
 });
 
 // post to add new notes to db.json
@@ -33,7 +33,7 @@ app.get('/', function (req, res) {
 });
 // for notes page
 app.get('/notes', function (req, res) {
-    res.sendFile(path.join(__dirname, "../../notes.html"));
+    res.sendFile(path.join(__dirname, "./public/notes.html"));
 });
 
 // listen
