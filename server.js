@@ -33,7 +33,7 @@ app.get('/', function (req, res) {
 });
 // for notes page
 app.get('/notes', function (req, res) {
-    res.sendFile(path.join(__dirname, "./public/notes.html"));
+    res.sendFile(path.join(__dirname, "../../notes.html"));
 });
 
 // listen
