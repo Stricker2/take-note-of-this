@@ -20,11 +20,12 @@ Build an app to take and save notes as needed using an Express.js server and rou
 
 Landing Page:
 
-<img />
+<img src="./public/assets/images/landing-page-screenshot.png"/>
+
 
 Notes Page:
 
-<img />
+<img src="./public/assets/images/notes-page-screenshot.png"/>
 
 Link: https://peaceful-sands-90893.herokuapp.com/
 
